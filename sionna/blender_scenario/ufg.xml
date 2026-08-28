@@ -1,0 +1,939 @@
+<scene version="2.1.0">
+
+<!-- Defaults, these can be set via the command line: -Darg=value -->
+
+
+<!-- Camera and Rendering Parameters -->
+
+	<integrator type="path" id="elm__0" name="elm__0">
+		<integer name="max_depth" value="12"/>
+	</integrator>
+
+<!-- Materials -->
+
+	<bsdf type="twosided" id="mat-itu_concrete" name="mat-itu_concrete">
+		<bsdf type="principled" name="bsdf">
+			<rgb value="0.800000 0.800000 0.800000" name="base_color"/>
+			<float name="spec_tint" value="0.000000"/>
+			<float name="spec_trans" value="0.000000"/>
+			<float name="metallic" value="0.000000"/>
+			<float name="anisotropic" value="0.000000"/>
+			<float name="roughness" value="0.250000"/>
+			<float name="sheen" value="0.000000"/>
+			<float name="sheen_tint" value="0.500000"/>
+			<float name="clearcoat" value="0.000000"/>
+			<float name="clearcoat_gloss" value="0.000900"/>
+			<float name="specular" value="0.500000"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="diffuse" id="mat-itu_brick" name="mat-itu_brick">
+		<rgb value="1.000000 0.500000 0.200000" name="reflectance"/>
+	</bsdf>
+	<bsdf type="diffuse" id="mat-itu_metal" name="mat-itu_metal">
+		<rgb value="0.290000 0.250000 0.210000" name="reflectance"/>
+	</bsdf>
+
+<!-- Emitters -->
+
+
+<!-- Shapes -->
+
+	<shape type="ply" id="mesh-Plane" name="mesh-Plane">
+		<string name="filename" value="meshes/Plane.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Reitoria-itu_brick" name="mesh-Reitoria-itu_brick">
+		<string name="filename" value="meshes/Reitoria-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Reitoria-itu_metal" name="mesh-Reitoria-itu_metal">
+		<string name="filename" value="meshes/Reitoria-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Biblioteca_Central-itu_brick" name="mesh-Biblioteca_Central-itu_brick">
+		<string name="filename" value="meshes/Biblioteca_Central-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Biblioteca_Central-itu_metal" name="mesh-Biblioteca_Central-itu_metal">
+		<string name="filename" value="meshes/Biblioteca_Central-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-FAV_-_Faculdade_de_Artes_Visuais-itu_brick" name="mesh-FAV_-_Faculdade_de_Artes_Visuais-itu_brick">
+		<string name="filename" value="meshes/FAV_-_Faculdade_de_Artes_Visuais-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-FAV_-_Faculdade_de_Artes_Visuais-itu_metal" name="mesh-FAV_-_Faculdade_de_Artes_Visuais-itu_metal">
+		<string name="filename" value="meshes/FAV_-_Faculdade_de_Artes_Visuais-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-EMAC_-_Escola_de_M_sica_e_Artes_C_nicas-itu_brick" name="mesh-EMAC_-_Escola_de_M_sica_e_Artes_C_nicas-itu_brick">
+		<string name="filename" value="meshes/EMAC_-_Escola_de_M_sica_e_Artes_C_nicas-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-EMAC_-_Escola_de_M_sica_e_Artes_C_nicas-itu_metal" name="mesh-EMAC_-_Escola_de_M_sica_e_Artes_C_nicas-itu_metal">
+		<string name="filename" value="meshes/EMAC_-_Escola_de_M_sica_e_Artes_C_nicas-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_de_Conviv_ncia-itu_brick" name="mesh-Centro_de_Conviv_ncia-itu_brick">
+		<string name="filename" value="meshes/Centro_de_Conviv_ncia-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_de_Conviv_ncia-itu_metal" name="mesh-Centro_de_Conviv_ncia-itu_metal">
+		<string name="filename" value="meshes/Centro_de_Conviv_ncia-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_de_Eventos_Professor_Ricardo_Freua_Buf_i_al-itu_brick" name="mesh-Centro_de_Eventos_Professor_Ricardo_Freua_Buf_i_al-itu_brick">
+		<string name="filename" value="meshes/Centro_de_Eventos_Professor_Ricardo_Freua_Buf_i_al-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_de_Eventos_Professor_Ricardo_Freua_Buf_i_al-itu_metal" name="mesh-Centro_de_Eventos_Professor_Ricardo_Freua_Buf_i_al-itu_metal">
+		<string name="filename" value="meshes/Centro_de_Eventos_Professor_Ricardo_Freua_Buf_i_al-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-ICB_2-itu_brick" name="mesh-ICB_2-itu_brick">
+		<string name="filename" value="meshes/ICB_2-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-ICB_2-itu_metal" name="mesh-ICB_2-itu_metal">
+		<string name="filename" value="meshes/ICB_2-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-ICB_1-itu_brick" name="mesh-ICB_1-itu_brick">
+		<string name="filename" value="meshes/ICB_1-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-ICB_1-itu_metal" name="mesh-ICB_1-itu_metal">
+		<string name="filename" value="meshes/ICB_1-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-ICB_3-itu_brick" name="mesh-ICB_3-itu_brick">
+		<string name="filename" value="meshes/ICB_3-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-ICB_3-itu_metal" name="mesh-ICB_3-itu_metal">
+		<string name="filename" value="meshes/ICB_3-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-ICB_4-itu_brick" name="mesh-ICB_4-itu_brick">
+		<string name="filename" value="meshes/ICB_4-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-ICB_4-itu_metal" name="mesh-ICB_4-itu_metal">
+		<string name="filename" value="meshes/ICB_4-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-RU_-_Restaurante_Universit_rio-itu_brick" name="mesh-RU_-_Restaurante_Universit_rio-itu_brick">
+		<string name="filename" value="meshes/RU_-_Restaurante_Universit_rio-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-RU_-_Restaurante_Universit_rio-itu_metal" name="mesh-RU_-_Restaurante_Universit_rio-itu_metal">
+		<string name="filename" value="meshes/RU_-_Restaurante_Universit_rio-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_de_Aulas_Aroeira-itu_brick" name="mesh-Centro_de_Aulas_Aroeira-itu_brick">
+		<string name="filename" value="meshes/Centro_de_Aulas_Aroeira-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_de_Aulas_Aroeira-itu_metal" name="mesh-Centro_de_Aulas_Aroeira-itu_metal">
+		<string name="filename" value="meshes/Centro_de_Aulas_Aroeira-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-IQ_2_-_Instituto_de_Qu_mica-itu_brick" name="mesh-IQ_2_-_Instituto_de_Qu_mica-itu_brick">
+		<string name="filename" value="meshes/IQ_2_-_Instituto_de_Qu_mica-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-IQ_2_-_Instituto_de_Qu_mica-itu_metal" name="mesh-IQ_2_-_Instituto_de_Qu_mica-itu_metal">
+		<string name="filename" value="meshes/IQ_2_-_Instituto_de_Qu_mica-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-IQ_1_-_Instituto_de_Qu_mica-itu_brick" name="mesh-IQ_1_-_Instituto_de_Qu_mica-itu_brick">
+		<string name="filename" value="meshes/IQ_1_-_Instituto_de_Qu_mica-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-IQ_1_-_Instituto_de_Qu_mica-itu_metal" name="mesh-IQ_1_-_Instituto_de_Qu_mica-itu_metal">
+		<string name="filename" value="meshes/IQ_1_-_Instituto_de_Qu_mica-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-IF2_-_Instituto_de_F_sica-itu_brick" name="mesh-IF2_-_Instituto_de_F_sica-itu_brick">
+		<string name="filename" value="meshes/IF2_-_Instituto_de_F_sica-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-IF2_-_Instituto_de_F_sica-itu_metal" name="mesh-IF2_-_Instituto_de_F_sica-itu_metal">
+		<string name="filename" value="meshes/IF2_-_Instituto_de_F_sica-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-IF1_-_Instituto_de_F_sica-itu_brick" name="mesh-IF1_-_Instituto_de_F_sica-itu_brick">
+		<string name="filename" value="meshes/IF1_-_Instituto_de_F_sica-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-IF1_-_Instituto_de_F_sica-itu_metal" name="mesh-IF1_-_Instituto_de_F_sica-itu_metal">
+		<string name="filename" value="meshes/IF1_-_Instituto_de_F_sica-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Faculdade_de_Hist_ria__Faculdade_de_Ci_ncias_Sociais_e_Faculd-itu_brick" name="mesh-Faculdade_de_Hist_ria__Faculdade_de_Ci_ncias_Sociais_e_Faculd-itu_brick">
+		<string name="filename" value="meshes/Faculdade_de_Hist_ria__Faculdade_de_Ci_ncias_Sociais_e_Faculd-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Faculdade_de_Hist_ria__Faculdade_de_Ci_ncias_Sociais_e_Faculd-itu_metal" name="mesh-Faculdade_de_Hist_ria__Faculdade_de_Ci_ncias_Sociais_e_Faculd-itu_metal">
+		<string name="filename" value="meshes/Faculdade_de_Hist_ria__Faculdade_de_Ci_ncias_Sociais_e_Faculd-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Faculdade_de_Letras-itu_brick" name="mesh-Faculdade_de_Letras-itu_brick">
+		<string name="filename" value="meshes/Faculdade_de_Letras-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Faculdade_de_Letras-itu_metal" name="mesh-Faculdade_de_Letras-itu_metal">
+		<string name="filename" value="meshes/Faculdade_de_Letras-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Del_cias_do_Campus-itu_brick" name="mesh-Del_cias_do_Campus-itu_brick">
+		<string name="filename" value="meshes/Del_cias_do_Campus-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Del_cias_do_Campus-itu_metal" name="mesh-Del_cias_do_Campus-itu_metal">
+		<string name="filename" value="meshes/Del_cias_do_Campus-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Instituto_de_Matem_tica_e_Estat_stica-itu_brick" name="mesh-Instituto_de_Matem_tica_e_Estat_stica-itu_brick">
+		<string name="filename" value="meshes/Instituto_de_Matem_tica_e_Estat_stica-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Instituto_de_Matem_tica_e_Estat_stica-itu_metal" name="mesh-Instituto_de_Matem_tica_e_Estat_stica-itu_metal">
+		<string name="filename" value="meshes/Instituto_de_Matem_tica_e_Estat_stica-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element-itu_brick" name="mesh-element-itu_brick">
+		<string name="filename" value="meshes/element-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element-itu_metal" name="mesh-element-itu_metal">
+		<string name="filename" value="meshes/element-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-FIC_-_Faculdade_de_Informa__o_e_Comunica__o-itu_brick" name="mesh-FIC_-_Faculdade_de_Informa__o_e_Comunica__o-itu_brick">
+		<string name="filename" value="meshes/FIC_-_Faculdade_de_Informa__o_e_Comunica__o-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-FIC_-_Faculdade_de_Informa__o_e_Comunica__o-itu_metal" name="mesh-FIC_-_Faculdade_de_Informa__o_e_Comunica__o-itu_metal">
+		<string name="filename" value="meshes/FIC_-_Faculdade_de_Informa__o_e_Comunica__o-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Faculdade_de_Administra__o__Ci_ncias_Cont_beis_e_Economia-itu_brick" name="mesh-Faculdade_de_Administra__o__Ci_ncias_Cont_beis_e_Economia-itu_brick">
+		<string name="filename" value="meshes/Faculdade_de_Administra__o__Ci_ncias_Cont_beis_e_Economia-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Faculdade_de_Administra__o__Ci_ncias_Cont_beis_e_Economia-itu_metal" name="mesh-Faculdade_de_Administra__o__Ci_ncias_Cont_beis_e_Economia-itu_metal">
+		<string name="filename" value="meshes/Faculdade_de_Administra__o__Ci_ncias_Cont_beis_e_Economia-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_de_Aulas_Baru-itu_brick" name="mesh-Centro_de_Aulas_Baru-itu_brick">
+		<string name="filename" value="meshes/Centro_de_Aulas_Baru-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_de_Aulas_Baru-itu_metal" name="mesh-Centro_de_Aulas_Baru-itu_metal">
+		<string name="filename" value="meshes/Centro_de_Aulas_Baru-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Departamento_de_Educa__o_Infantil__CEPAE_-itu_brick" name="mesh-Departamento_de_Educa__o_Infantil__CEPAE_-itu_brick">
+		<string name="filename" value="meshes/Departamento_de_Educa__o_Infantil__CEPAE_-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Departamento_de_Educa__o_Infantil__CEPAE_-itu_metal" name="mesh-Departamento_de_Educa__o_Infantil__CEPAE_-itu_metal">
+		<string name="filename" value="meshes/Departamento_de_Educa__o_Infantil__CEPAE_-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_de_Aulas_Cara_bas-itu_brick" name="mesh-Centro_de_Aulas_Cara_bas-itu_brick">
+		<string name="filename" value="meshes/Centro_de_Aulas_Cara_bas-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_de_Aulas_Cara_bas-itu_metal" name="mesh-Centro_de_Aulas_Cara_bas-itu_metal">
+		<string name="filename" value="meshes/Centro_de_Aulas_Cara_bas-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Instituto_de_Inform_tica-itu_brick" name="mesh-Instituto_de_Inform_tica-itu_brick">
+		<string name="filename" value="meshes/Instituto_de_Inform_tica-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Instituto_de_Inform_tica-itu_metal" name="mesh-Instituto_de_Inform_tica-itu_metal">
+		<string name="filename" value="meshes/Instituto_de_Inform_tica-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-IESA_-_Instituto_de_Estudos_S_cio-Ambientais-itu_brick" name="mesh-IESA_-_Instituto_de_Estudos_S_cio-Ambientais-itu_brick">
+		<string name="filename" value="meshes/IESA_-_Instituto_de_Estudos_S_cio-Ambientais-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-IESA_-_Instituto_de_Estudos_S_cio-Ambientais-itu_metal" name="mesh-IESA_-_Instituto_de_Estudos_S_cio-Ambientais-itu_metal">
+		<string name="filename" value="meshes/IESA_-_Instituto_de_Estudos_S_cio-Ambientais-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-FEFD_-_Faculdade_de_Educa__o_F_sica-itu_brick" name="mesh-FEFD_-_Faculdade_de_Educa__o_F_sica-itu_brick">
+		<string name="filename" value="meshes/FEFD_-_Faculdade_de_Educa__o_F_sica-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-FEFD_-_Faculdade_de_Educa__o_F_sica-itu_metal" name="mesh-FEFD_-_Faculdade_de_Educa__o_F_sica-itu_metal">
+		<string name="filename" value="meshes/FEFD_-_Faculdade_de_Educa__o_F_sica-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Gin_sio_de_Gin_stica_e_Lutas_-_FEFD-itu_brick" name="mesh-Gin_sio_de_Gin_stica_e_Lutas_-_FEFD-itu_brick">
+		<string name="filename" value="meshes/Gin_sio_de_Gin_stica_e_Lutas_-_FEFD-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Gin_sio_de_Gin_stica_e_Lutas_-_FEFD-itu_metal" name="mesh-Gin_sio_de_Gin_stica_e_Lutas_-_FEFD-itu_metal">
+		<string name="filename" value="meshes/Gin_sio_de_Gin_stica_e_Lutas_-_FEFD-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_de_Dan_a_Lenir_Miguel_de_Lima_-_FEF-itu_brick" name="mesh-Centro_de_Dan_a_Lenir_Miguel_de_Lima_-_FEF-itu_brick">
+		<string name="filename" value="meshes/Centro_de_Dan_a_Lenir_Miguel_de_Lima_-_FEF-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_de_Dan_a_Lenir_Miguel_de_Lima_-_FEF-itu_metal" name="mesh-Centro_de_Dan_a_Lenir_Miguel_de_Lima_-_FEF-itu_metal">
+		<string name="filename" value="meshes/Centro_de_Dan_a_Lenir_Miguel_de_Lima_-_FEF-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Quadra_esportiva-itu_brick" name="mesh-Quadra_esportiva-itu_brick">
+		<string name="filename" value="meshes/Quadra_esportiva-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Quadra_esportiva-itu_metal" name="mesh-Quadra_esportiva-itu_metal">
+		<string name="filename" value="meshes/Quadra_esportiva-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Reuni-itu_brick" name="mesh-Reuni-itu_brick">
+		<string name="filename" value="meshes/Reuni-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Reuni-itu_metal" name="mesh-Reuni-itu_metal">
+		<string name="filename" value="meshes/Reuni-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Bloco_Reuni-itu_brick" name="mesh-Bloco_Reuni-itu_brick">
+		<string name="filename" value="meshes/Bloco_Reuni-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Bloco_Reuni-itu_metal" name="mesh-Bloco_Reuni-itu_metal">
+		<string name="filename" value="meshes/Bloco_Reuni-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_001-itu_brick" name="mesh-element_001-itu_brick">
+		<string name="filename" value="meshes/element_001-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_001-itu_metal" name="mesh-element_001-itu_metal">
+		<string name="filename" value="meshes/element_001-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_002-itu_brick" name="mesh-element_002-itu_brick">
+		<string name="filename" value="meshes/element_002-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_002-itu_metal" name="mesh-element_002-itu_metal">
+		<string name="filename" value="meshes/element_002-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_003-itu_brick" name="mesh-element_003-itu_brick">
+		<string name="filename" value="meshes/element_003-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_003-itu_metal" name="mesh-element_003-itu_metal">
+		<string name="filename" value="meshes/element_003-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_004-itu_brick" name="mesh-element_004-itu_brick">
+		<string name="filename" value="meshes/element_004-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_004-itu_metal" name="mesh-element_004-itu_metal">
+		<string name="filename" value="meshes/element_004-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Casa_De_Estudante_Universit_rio_5_UFG-itu_brick" name="mesh-Casa_De_Estudante_Universit_rio_5_UFG-itu_brick">
+		<string name="filename" value="meshes/Casa_De_Estudante_Universit_rio_5_UFG-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Casa_De_Estudante_Universit_rio_5_UFG-itu_metal" name="mesh-Casa_De_Estudante_Universit_rio_5_UFG-itu_metal">
+		<string name="filename" value="meshes/Casa_De_Estudante_Universit_rio_5_UFG-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Incubadora_Social_-_UFG-itu_brick" name="mesh-Incubadora_Social_-_UFG-itu_brick">
+		<string name="filename" value="meshes/Incubadora_Social_-_UFG-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Incubadora_Social_-_UFG-itu_metal" name="mesh-Incubadora_Social_-_UFG-itu_metal">
+		<string name="filename" value="meshes/Incubadora_Social_-_UFG-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Cine_UFG-itu_brick" name="mesh-Cine_UFG-itu_brick">
+		<string name="filename" value="meshes/Cine_UFG-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Cine_UFG-itu_metal" name="mesh-Cine_UFG-itu_metal">
+		<string name="filename" value="meshes/Cine_UFG-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_Integrado_de_Aprendizagem_em_Rede__CIAR_-itu_brick" name="mesh-Centro_Integrado_de_Aprendizagem_em_Rede__CIAR_-itu_brick">
+		<string name="filename" value="meshes/Centro_Integrado_de_Aprendizagem_em_Rede__CIAR_-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Centro_Integrado_de_Aprendizagem_em_Rede__CIAR_-itu_metal" name="mesh-Centro_Integrado_de_Aprendizagem_em_Rede__CIAR_-itu_metal">
+		<string name="filename" value="meshes/Centro_Integrado_de_Aprendizagem_em_Rede__CIAR_-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_005-itu_brick" name="mesh-element_005-itu_brick">
+		<string name="filename" value="meshes/element_005-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_005-itu_metal" name="mesh-element_005-itu_metal">
+		<string name="filename" value="meshes/element_005-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_006-itu_brick" name="mesh-element_006-itu_brick">
+		<string name="filename" value="meshes/element_006-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_006-itu_metal" name="mesh-element_006-itu_metal">
+		<string name="filename" value="meshes/element_006-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_007-itu_brick" name="mesh-element_007-itu_brick">
+		<string name="filename" value="meshes/element_007-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_007-itu_metal" name="mesh-element_007-itu_metal">
+		<string name="filename" value="meshes/element_007-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_008-itu_brick" name="mesh-element_008-itu_brick">
+		<string name="filename" value="meshes/element_008-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_008-itu_metal" name="mesh-element_008-itu_metal">
+		<string name="filename" value="meshes/element_008-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-CEPAE_UFG-itu_brick" name="mesh-CEPAE_UFG-itu_brick">
+		<string name="filename" value="meshes/CEPAE_UFG-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-CEPAE_UFG-itu_metal" name="mesh-CEPAE_UFG-itu_metal">
+		<string name="filename" value="meshes/CEPAE_UFG-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Col_gio_Estadual_Waldemar_Mundim-itu_brick" name="mesh-Col_gio_Estadual_Waldemar_Mundim-itu_brick">
+		<string name="filename" value="meshes/Col_gio_Estadual_Waldemar_Mundim-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Col_gio_Estadual_Waldemar_Mundim-itu_metal" name="mesh-Col_gio_Estadual_Waldemar_Mundim-itu_metal">
+		<string name="filename" value="meshes/Col_gio_Estadual_Waldemar_Mundim-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-FCS_-_Faculdade_de_Ci_ncias_Sociais-itu_brick" name="mesh-FCS_-_Faculdade_de_Ci_ncias_Sociais-itu_brick">
+		<string name="filename" value="meshes/FCS_-_Faculdade_de_Ci_ncias_Sociais-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-FCS_-_Faculdade_de_Ci_ncias_Sociais-itu_metal" name="mesh-FCS_-_Faculdade_de_Ci_ncias_Sociais-itu_metal">
+		<string name="filename" value="meshes/FCS_-_Faculdade_de_Ci_ncias_Sociais-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-MediaLab-itu_brick" name="mesh-MediaLab-itu_brick">
+		<string name="filename" value="meshes/MediaLab-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-MediaLab-itu_metal" name="mesh-MediaLab-itu_metal">
+		<string name="filename" value="meshes/MediaLab-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_009-itu_brick" name="mesh-element_009-itu_brick">
+		<string name="filename" value="meshes/element_009-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_009-itu_metal" name="mesh-element_009-itu_metal">
+		<string name="filename" value="meshes/element_009-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-DCE-itu_brick" name="mesh-DCE-itu_brick">
+		<string name="filename" value="meshes/DCE-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-DCE-itu_metal" name="mesh-DCE-itu_metal">
+		<string name="filename" value="meshes/DCE-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_010-itu_brick" name="mesh-element_010-itu_brick">
+		<string name="filename" value="meshes/element_010-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_010-itu_metal" name="mesh-element_010-itu_metal">
+		<string name="filename" value="meshes/element_010-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_011-itu_brick" name="mesh-element_011-itu_brick">
+		<string name="filename" value="meshes/element_011-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_011-itu_metal" name="mesh-element_011-itu_metal">
+		<string name="filename" value="meshes/element_011-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_012-itu_brick" name="mesh-element_012-itu_brick">
+		<string name="filename" value="meshes/element_012-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_012-itu_metal" name="mesh-element_012-itu_metal">
+		<string name="filename" value="meshes/element_012-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_013-itu_brick" name="mesh-element_013-itu_brick">
+		<string name="filename" value="meshes/element_013-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_013-itu_metal" name="mesh-element_013-itu_metal">
+		<string name="filename" value="meshes/element_013-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_014-itu_brick" name="mesh-element_014-itu_brick">
+		<string name="filename" value="meshes/element_014-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_014-itu_metal" name="mesh-element_014-itu_metal">
+		<string name="filename" value="meshes/element_014-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_015-itu_brick" name="mesh-element_015-itu_brick">
+		<string name="filename" value="meshes/element_015-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_015-itu_metal" name="mesh-element_015-itu_metal">
+		<string name="filename" value="meshes/element_015-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_016-itu_brick" name="mesh-element_016-itu_brick">
+		<string name="filename" value="meshes/element_016-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_016-itu_metal" name="mesh-element_016-itu_metal">
+		<string name="filename" value="meshes/element_016-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_017-itu_brick" name="mesh-element_017-itu_brick">
+		<string name="filename" value="meshes/element_017-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_017-itu_metal" name="mesh-element_017-itu_metal">
+		<string name="filename" value="meshes/element_017-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_018-itu_brick" name="mesh-element_018-itu_brick">
+		<string name="filename" value="meshes/element_018-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_018-itu_metal" name="mesh-element_018-itu_metal">
+		<string name="filename" value="meshes/element_018-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_019-itu_brick" name="mesh-element_019-itu_brick">
+		<string name="filename" value="meshes/element_019-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_019-itu_metal" name="mesh-element_019-itu_metal">
+		<string name="filename" value="meshes/element_019-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_020-itu_brick" name="mesh-element_020-itu_brick">
+		<string name="filename" value="meshes/element_020-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_020-itu_metal" name="mesh-element_020-itu_metal">
+		<string name="filename" value="meshes/element_020-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_021-itu_brick" name="mesh-element_021-itu_brick">
+		<string name="filename" value="meshes/element_021-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_021-itu_metal" name="mesh-element_021-itu_metal">
+		<string name="filename" value="meshes/element_021-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_022-itu_brick" name="mesh-element_022-itu_brick">
+		<string name="filename" value="meshes/element_022-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_022-itu_metal" name="mesh-element_022-itu_metal">
+		<string name="filename" value="meshes/element_022-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_023-itu_brick" name="mesh-element_023-itu_brick">
+		<string name="filename" value="meshes/element_023-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_023-itu_metal" name="mesh-element_023-itu_metal">
+		<string name="filename" value="meshes/element_023-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_024-itu_brick" name="mesh-element_024-itu_brick">
+		<string name="filename" value="meshes/element_024-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_024-itu_metal" name="mesh-element_024-itu_metal">
+		<string name="filename" value="meshes/element_024-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_025-itu_brick" name="mesh-element_025-itu_brick">
+		<string name="filename" value="meshes/element_025-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_025-itu_metal" name="mesh-element_025-itu_metal">
+		<string name="filename" value="meshes/element_025-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_026-itu_brick" name="mesh-element_026-itu_brick">
+		<string name="filename" value="meshes/element_026-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_026-itu_metal" name="mesh-element_026-itu_metal">
+		<string name="filename" value="meshes/element_026-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_027-itu_brick" name="mesh-element_027-itu_brick">
+		<string name="filename" value="meshes/element_027-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_027-itu_metal" name="mesh-element_027-itu_metal">
+		<string name="filename" value="meshes/element_027-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Herb_rio_UFG-itu_brick" name="mesh-Herb_rio_UFG-itu_brick">
+		<string name="filename" value="meshes/Herb_rio_UFG-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Herb_rio_UFG-itu_metal" name="mesh-Herb_rio_UFG-itu_metal">
+		<string name="filename" value="meshes/Herb_rio_UFG-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-CEPAE_UFG_001-itu_brick" name="mesh-CEPAE_UFG_001-itu_brick">
+		<string name="filename" value="meshes/CEPAE_UFG_001-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-CEPAE_UFG_001-itu_metal" name="mesh-CEPAE_UFG_001-itu_metal">
+		<string name="filename" value="meshes/CEPAE_UFG_001-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_028-itu_brick" name="mesh-element_028-itu_brick">
+		<string name="filename" value="meshes/element_028-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_028-itu_metal" name="mesh-element_028-itu_metal">
+		<string name="filename" value="meshes/element_028-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_029-itu_brick" name="mesh-element_029-itu_brick">
+		<string name="filename" value="meshes/element_029-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_029-itu_metal" name="mesh-element_029-itu_metal">
+		<string name="filename" value="meshes/element_029-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_030-itu_brick" name="mesh-element_030-itu_brick">
+		<string name="filename" value="meshes/element_030-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_030-itu_metal" name="mesh-element_030-itu_metal">
+		<string name="filename" value="meshes/element_030-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_031-itu_brick" name="mesh-element_031-itu_brick">
+		<string name="filename" value="meshes/element_031-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_031-itu_metal" name="mesh-element_031-itu_metal">
+		<string name="filename" value="meshes/element_031-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_032-itu_brick" name="mesh-element_032-itu_brick">
+		<string name="filename" value="meshes/element_032-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_032-itu_metal" name="mesh-element_032-itu_metal">
+		<string name="filename" value="meshes/element_032-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Almoxarifado_Instituto_de_Qu_mica-itu_brick" name="mesh-Almoxarifado_Instituto_de_Qu_mica-itu_brick">
+		<string name="filename" value="meshes/Almoxarifado_Instituto_de_Qu_mica-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Almoxarifado_Instituto_de_Qu_mica-itu_metal" name="mesh-Almoxarifado_Instituto_de_Qu_mica-itu_metal">
+		<string name="filename" value="meshes/Almoxarifado_Instituto_de_Qu_mica-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-LAMES_-_Laborat_rio_de_M_todos_de_Extra__o_e_Separa__o-itu_brick" name="mesh-LAMES_-_Laborat_rio_de_M_todos_de_Extra__o_e_Separa__o-itu_brick">
+		<string name="filename" value="meshes/LAMES_-_Laborat_rio_de_M_todos_de_Extra__o_e_Separa__o-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-LAMES_-_Laborat_rio_de_M_todos_de_Extra__o_e_Separa__o-itu_metal" name="mesh-LAMES_-_Laborat_rio_de_M_todos_de_Extra__o_e_Separa__o-itu_metal">
+		<string name="filename" value="meshes/LAMES_-_Laborat_rio_de_M_todos_de_Extra__o_e_Separa__o-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-NUPEC-itu_brick" name="mesh-NUPEC-itu_brick">
+		<string name="filename" value="meshes/NUPEC-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-NUPEC-itu_metal" name="mesh-NUPEC-itu_metal">
+		<string name="filename" value="meshes/NUPEC-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Assembleia_de_Deus_Minist_rio_Vila_Nova-itu_brick" name="mesh-Assembleia_de_Deus_Minist_rio_Vila_Nova-itu_brick">
+		<string name="filename" value="meshes/Assembleia_de_Deus_Minist_rio_Vila_Nova-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Assembleia_de_Deus_Minist_rio_Vila_Nova-itu_metal" name="mesh-Assembleia_de_Deus_Minist_rio_Vila_Nova-itu_metal">
+		<string name="filename" value="meshes/Assembleia_de_Deus_Minist_rio_Vila_Nova-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_033-itu_brick" name="mesh-element_033-itu_brick">
+		<string name="filename" value="meshes/element_033-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_033-itu_metal" name="mesh-element_033-itu_metal">
+		<string name="filename" value="meshes/element_033-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_034-itu_brick" name="mesh-element_034-itu_brick">
+		<string name="filename" value="meshes/element_034-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_034-itu_metal" name="mesh-element_034-itu_metal">
+		<string name="filename" value="meshes/element_034-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Mandala_Cervejaria-itu_brick" name="mesh-Mandala_Cervejaria-itu_brick">
+		<string name="filename" value="meshes/Mandala_Cervejaria-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Mandala_Cervejaria-itu_metal" name="mesh-Mandala_Cervejaria-itu_metal">
+		<string name="filename" value="meshes/Mandala_Cervejaria-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-CERCOMP-itu_brick" name="mesh-CERCOMP-itu_brick">
+		<string name="filename" value="meshes/CERCOMP-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-CERCOMP-itu_metal" name="mesh-CERCOMP-itu_metal">
+		<string name="filename" value="meshes/CERCOMP-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_035-itu_brick" name="mesh-element_035-itu_brick">
+		<string name="filename" value="meshes/element_035-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_035-itu_metal" name="mesh-element_035-itu_metal">
+		<string name="filename" value="meshes/element_035-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Caixa_Econ_mica_Federal-itu_brick" name="mesh-Caixa_Econ_mica_Federal-itu_brick">
+		<string name="filename" value="meshes/Caixa_Econ_mica_Federal-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Caixa_Econ_mica_Federal-itu_metal" name="mesh-Caixa_Econ_mica_Federal-itu_metal">
+		<string name="filename" value="meshes/Caixa_Econ_mica_Federal-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Engenharia_Mecanica_-_UFG-itu_brick" name="mesh-Engenharia_Mecanica_-_UFG-itu_brick">
+		<string name="filename" value="meshes/Engenharia_Mecanica_-_UFG-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Engenharia_Mecanica_-_UFG-itu_metal" name="mesh-Engenharia_Mecanica_-_UFG-itu_metal">
+		<string name="filename" value="meshes/Engenharia_Mecanica_-_UFG-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_036-itu_brick" name="mesh-element_036-itu_brick">
+		<string name="filename" value="meshes/element_036-itu_brick.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_brick" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_036-itu_metal" name="mesh-element_036-itu_metal">
+		<string name="filename" value="meshes/element_036-itu_metal.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="mat-itu_metal" name="bsdf"/>
+	</shape>
+
+<!-- Volumes -->
+
+</scene>
